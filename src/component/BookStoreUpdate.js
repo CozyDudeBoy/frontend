@@ -21,7 +21,7 @@ function BookStoreUpdate(props) {
   const navigate = useNavigate();
 
   useEffect(()=>{
-    axios.get(`http://localhost:9070/bookstore/${num}`)
+    axios.get(`https://port-0-backend-express-server-mkvwe63p223f9070.sel3.cloudtype.app/bookstore/${num}`)
     // 성공시
     .then(res=>{
       console.log('서버 응답 값 :', res.data);
@@ -46,7 +46,7 @@ const handleChange = (e) => {
     e.preventDefault(); //새로고침 방지
 
     // 비동기 방식으로 업데이트 할 내용을 백엔드로 전달함
-    axios.put(`http://localhost:9070/bookstore/bookstoreupdate/${num}`,{
+    axios.put(`https://port-0-backend-express-server-mkvwe63p223f9070.sel3.cloudtype.app/bookstoreupdate/${num}`,{
       name:form.name,
       area1:form.area1,
       area2:form.area2,
@@ -135,5 +135,6 @@ const handleChange = (e) => {
     </main>
   );
 }
+
 
 export default BookStoreUpdate;
