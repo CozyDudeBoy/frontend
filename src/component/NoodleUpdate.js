@@ -21,7 +21,7 @@ function NoodleUpdate(props) {
 
   // 특정 번호를 가지고 해당하는 데이터 조회
   useEffect(()=>{
-    axios.get(`http://localhost:9070/noodle/${num}`)
+    axios.get(`https://port-0-backend-express-server-mkvwe63p223f9070.sel3.cloudtype.app/noodle/${num}`)
     // 성공시 
     .then(res=>{
       console.log('서버 응당 값 :', res.data);
@@ -43,7 +43,7 @@ function NoodleUpdate(props) {
   const handleSubmit=(e)=>{
   e.preventDefault();//새로고침 방지 
   // 비동기 방식으로 업데이트 할 내용을 백엔드로 전달함 
-  axios.put(`http://localhost:9070/noodle/noodleupdate/${num}`,{
+  axios.put(`https://port-0-backend-express-server-mkvwe63p223f9070.sel3.cloudtype.app/noodle/noodleupdate/${num}`,{
     name:form.name,
     company:form.company,
     kind:form.kind,
@@ -99,5 +99,6 @@ function NoodleUpdate(props) {
     </div>
   );
 }
+
 
 export default NoodleUpdate;
