@@ -22,7 +22,7 @@ function Fruits(props) {
   const loadData=()=>{
     //비동기 통신 사용 
     axios
-    .get('http://localhost:9070/fruits')
+    .get('https://port-0-backend-express-server-mkvwe63p223f9070.sel3.cloudtype.app/fruits')
     //성공시 데이터를 저장
     .then(res=>setData(res.data) )
           
@@ -135,5 +135,6 @@ function Fruits(props) {
     </main>
   );
 }
+
 
 export default Fruits;
