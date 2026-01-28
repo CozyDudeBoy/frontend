@@ -11,7 +11,7 @@ const Users=()=> {
   const loadData=()=>{
     //비동기 통신 사용 
     axios
-    .get('http://localhost:9070/users')
+    .get('https://port-0-backend-express-server-mkvwe63p223f9070.sel3.cloudtype.app/users')
     //성공시 데이터를 저장
     .then(res=>setData(res.data) )
     // 실패시 에러 출력
@@ -75,5 +75,6 @@ const Users=()=> {
     </>
   );
 }
+
 
 export default Users;
