@@ -15,7 +15,7 @@ function BookStore(props) {
   const loadData=()=>{
     // 비동기 통신 사용 
     axios
-    .get('http://localhost:9070/bookstore')
+    .get('https://port-0-backend-express-server-mkvwe63p223f9070.sel3.cloudtype.app/bookstore')
     // 성공시 데이터를 저장 
     .then(res=>setData(res.data))
     // 실패시 에러 출력
@@ -143,5 +143,6 @@ function BookStore(props) {
     </main>
   );
 }
+
 
 export default BookStore;
