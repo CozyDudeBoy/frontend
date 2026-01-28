@@ -27,7 +27,7 @@ function NoodleCreate(props) {
   const handleSubmit=(e)=>{
     e.preventDefault(); //새로고침 방지
     // 비동기로 백엔드 서버에 데이터 넘김 
-    axios.post('http://localhost:9070/noodle',form)
+    axios.post('https://port-0-backend-express-server-mkvwe63p223f9070.sel3.cloudtype.app/noodle',form)
     .then(()=>{//통신이 성공적으로 이루어지면 
       setNoodleCount(count => count+1); //숫자 증강
     alert('상품이 정상적으로 등록 완료 되었습니다');
@@ -72,5 +72,6 @@ function NoodleCreate(props) {
     </div>
   );
 }
+
 
 export default NoodleCreate;
