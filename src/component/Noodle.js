@@ -11,7 +11,7 @@ function Noodle(props) {
   const loadData=()=>{
     // 비동기 통신사용 
     axios
-    .get('http://localhost:9070/noodle')
+    .get('https://port-0-backend-express-server-mkvwe63p223f9070.sel3.cloudtype.app/noodle')
     // 성공시 데이터 저장 
     .then(res=>setData(res.data))
     // 실패시 에러 출력
@@ -74,5 +74,6 @@ function Noodle(props) {
     </main>
   );
 }
+
 
 export default Noodle;
