@@ -26,7 +26,7 @@ function Noodle(props) {
   const deleteData=(num)=>{
     if(window.confirm('정말 삭제하시겠습니까?')){
       axios
-      .delete(`http://localhost:9070/noodle/${num}`)
+      .delete(`https://port-0-backend-express-server-mkvwe63p223f9070.sel3.cloudtype.app/noodle/${num}`)
       .then(()=>{
         alert('삭제되었습니다.');
         loadData(); //삭제후 다시 불러와서 목록을 새로고침
@@ -77,3 +77,4 @@ function Noodle(props) {
 
 
 export default Noodle;
+
