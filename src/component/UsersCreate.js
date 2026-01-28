@@ -33,7 +33,7 @@ function UsersCreate(props) {
   const handleSubmit=(e)=>{
     e.preventDefault();//새로고침 막기
 
-    axios.post('http://localhost:9070/users',form)
+    axios.post('https://port-0-backend-express-server-mkvwe63p223f9070.sel3.cloudtype.app/users',form)
     .then(()=>{ //통신이 성공하면 
       alert('회원가입이 완료 되었습니다.');
       navigate('/users'); //회원 목록 페이지로 이동하기
@@ -76,5 +76,6 @@ function UsersCreate(props) {
     </main>
   );
 }
+
 
 export default UsersCreate;
